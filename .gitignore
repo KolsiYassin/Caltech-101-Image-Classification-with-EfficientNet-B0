@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Virtual environment
+.venv/
+venv/
+
+# Dataset
+data/caltech101/
+
+# Model weights
+weights/
+*.pth
+*.pt
+
+# TensorBoard
+runs/
+
+# IDE / OS
+.vscode/
+.DS_Store
