@@ -40,6 +40,8 @@ The dataset is split using stratified sampling:
 
 The split is generated with a fixed random seed (`42`) and the same split is used across experiments for fair comparison.
 
+![split](plots/split_class_distribution.png)
+
 ## Model
 
 The project uses **EfficientNet-B0**, as specified by the task.
@@ -112,6 +114,7 @@ Several training configurations were evaluated.
 ### 1. Baseline
 
 ImageNet-pretrained EfficientNet-B0 with deterministic preprocessing and standard cross-entropy loss.
+![baseline_results](plots/baseline_accuracy.png)
 
 ### 2. Data Augmentation
 
@@ -123,17 +126,22 @@ Different augmentation strategies were evaluated, including:
 * Random rotation
 * Random affine transformations
 
+![augmentation_results](plots/augmentation_3_accuracy.png)
+
 ### 3. Class-Weighted Loss
 
 Class weights were calculated from the training split to compensate for the class imbalance.
 
 Only the training set was used to calculate the weights.
+![class_weighted results](plots/class_weighted_accuracy.png)
 
 ### 4. Random Initialization
 
 The same EfficientNet-B0 architecture was trained without ImageNet-pretrained weights.
 
 This experiment investigates the effect of transfer learning.
+
+![randon_initialization results](plots/random_init_accuracy.png)
 
 ### 5. Learning-Rate Scheduling
 
@@ -149,6 +157,7 @@ torch.optim.lr_scheduler.ReduceLROnPlateau(
 ```
 
 The learning rate is reduced when the validation loss stops improving.
+![Learning rate scheduling results](plots/lr_schedule_accuracy.png)
 
 ## Results
 
@@ -163,6 +172,8 @@ The final results are:
 | Class weighted               |         90.17% |     90.17% |     0.8561 |     0.4102 |
 | Random initialization        |         71.89% |     69.35% |     0.5606 |     1.8204 |
 | **Learning-rate scheduling** |     **94.93%** | **93.32%** | **0.9035** | **0.2810** |
+
+![results](plots/experiment_performance.png)
 
 ### Main Findings
 
