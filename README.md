@@ -4,6 +4,32 @@ Deep Learning Lab project for image classification on the **Caltech-101** datase
 
 The project investigates the effect of different training strategies, including data augmentation, class-weighted loss, random initialization, and learning-rate scheduling.
 
+## Tech Stack
+
+**Language:**
+![Python](https://img.shields.io/badge/Python-3.12.14-3776AB?logo=python\&logoColor=white)
+
+**Deep Learning:**
+![PyTorch](https://img.shields.io/badge/PyTorch-2.10.0-EE4C2C?logo=pytorch\&logoColor=white)
+![Torchvision](https://img.shields.io/badge/Torchvision-0.25.0-EE4C2C?logo=pytorch\&logoColor=white)
+![EfficientNet-B0](https://img.shields.io/badge/EfficientNet--B0-FF6F00?logo=tensorflow\&logoColor=white)
+
+**Machine Learning:**
+![scikit--learn](https://img.shields.io/badge/scikit--learn-F7931E?logo=scikit-learn\&logoColor=white)
+
+**Data Processing:**
+![NumPy](https://img.shields.io/badge/NumPy-013243?logo=numpy\&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-150458?logo=pandas\&logoColor=white)
+
+**Visualization:**
+![Matplotlib](https://img.shields.io/badge/Matplotlib-11557C?logo=matplotlib\&logoColor=white)
+
+**Compute:**
+![CUDA](https://img.shields.io/badge/CUDA-13.0-76B900?logo=nvidia\&logoColor=white)
+
+**GPU:** NVIDIA GeForce RTX 2080 Ti
+
+
 ## Overview
 
 The task is to classify images into **101 object categories** from the Caltech-101 dataset.
